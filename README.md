@@ -8,7 +8,7 @@ The controller uses a [Wemos D1 mini Lite](https://wiki.wemos.cc/products:d1:d1_
 
 ## Software
 
-The project should work with the Arduino IDE or Platformio.
+The project works with the Arduino IDE or Platformio.
 
 1. Clone the repository
 ```
@@ -19,9 +19,17 @@ git clone
 - Set `MDNS_NAME` to the name you'd like to use for web access - I recommend `fireplace`, which will let you browse to `http://fireplace.local`
 - If you want to use IFTTT, set `IFTTT_EVENT_NAME` and `IFTTT_API_KEY` to appropriate values. If you don't want to use IFTTT then delete the `#define` lines for them.
 
-3. Connect your Wemos D1 mini Lite board to your computer using a USB cable and:
-- if you're using Platformio run `platformio run -t upload`
-- if you're using the Arduino IDE click the build and upload button
+3. Connect your Wemos D1 mini Lite board to your computer using a USB cable.
+
+4. Compile and upload the code to your board:
+- If you're using Platformio: Run `platformio run -t upload`
+- If you're using the Arduino IDE:
+  - Install https://github.com/romkey/IFTTTWebhook.
+  - Install https://github.com/romkey/BootstrapWebSite.
+  - Open the file `src/src.ino` from the cloned repository.
+  - Tools > Board > Wemos D1 R2 & mini
+  - Tools > Port > select your board's port
+  - Sketch > Upload
 
 ## Siri
 
